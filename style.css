@@ -1,0 +1,149 @@
+/* ======== STYLE GLOBAL ======== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Georgia", serif;
+  background: linear-gradient(to top right, navy, purple, darkviolet);
+  color: white;
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* ======== TITRE PRINCIPAL ======== */
+h1 {
+  color: white;
+  font-size: 50px;
+  margin-top: 40px;
+  text-shadow: 2px 2px 5px black;
+  letter-spacing: 2px;
+}
+
+/* ======== IMAGE DE PROFIL ======== */
+img {
+  display: block;
+  margin: 30px auto;
+  width: 300px;
+  height: 450px;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 0px 0px 15px black;
+  transition: transform 0.5s;
+}
+
+img:hover {
+  transform: scale(1.1);
+}
+
+/* ======== PARAGRAPHE ======== */
+p {
+  max-width: 600px;
+  margin: 20px auto;
+  font-size: 18px;
+  line-height: 1.6;
+  color: white;
+  padding: 0 15px;
+}
+
+/* ======== LISTE ======== */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  font-size: 18px;
+  margin: 8px 0;
+  color: white;
+}
+
+.effet {
+  color: tomato;
+  font-size: 22px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+/* ======== LIEN TELEGRAM ======== */
+a {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  font-size: 22px;
+  color: deepskyblue;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+a:hover {
+  transform: scale(1.1);
+}
+
+/* ======== PIED DE PAGE ======== */
+footer {
+  margin-top: 40px;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+footer p {
+  font-size: 14px;
+  color: lightgray;
+  margin: 0;
+}
+
+/* ======== 🎯 RESPONSIVE DESIGN ======== */
+
+/* 📱 Petits écrans (téléphones) */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  img {
+    width: 80%;
+    height: auto;
+  }
+
+  p, li {
+    font-size: 16px;
+  }
+
+  a {
+    font-size: 18px;
+    padding: 8px 15px;
+  }
+}
+
+/* 💻 Tablettes (écrans moyens) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  img {
+    width: 70%;
+    height: auto;
+  }
+
+  p {
+    font-size: 17px;
+  }
+}
+
+/* 🖥️ Grands écrans (ordinateurs) */
+@media (min-width: 1025px) {
+  body {
+    background: linear-gradient(to right, navy, purple, indigo);
+  }
+
+  h1 {
+    font-size: 55px;
+  }
+
+  img {
+    width: 350px;
+    height: 500px;
+  }
+}

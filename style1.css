@@ -1,0 +1,212 @@
+/* ========== STYLE GLOBAL ========== */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to bottom,lightblue,lightgreen);
+  color: white;
+  text-align: center;
+}
+
+/* ========== HEADER ========== */
+header {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header h1 {
+  margin: 10px 0;
+  font-size: 32px;
+  text-shadow: 2px 2px 5px black;
+}
+
+header a {
+  color: #00ffff;
+  text-decoration: none;
+  margin: 0 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+header a:hover {
+  color: gold;
+}
+
+/* ========== ACCUEIL ========== */
+.Accueil{
+  display: block;
+  text-align: center;
+  padding: 10px;
+  background-image: url('vet12.jpg');
+  background: linear-gradient(to top,lightblue,lightpink,lightblue);
+  font-family: Times New Roman;
+  color:black;
+}
+.Accueil a{
+  text-decoration: none;
+  display: block;
+  background: royalblue;
+  border-radius: 10px;
+  padding: 15px;
+  margin:20px;
+  color: white;
+  font-family: Georgia;
+}
+.Accueil a {
+  background: #00ffff;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.Accueil a:hover {
+  background: gold;
+}
+
+/* ========== PRODUITS ========== */
+.Produits {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 colonnes sur PC */
+  gap: 20px;
+  padding: 40px 20px;
+  
+}
+
+.article {
+    background-color: rgba(0,30,255,0.1);
+  border-radius: 15px;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+.article:hover {
+  transform: scale(1.05);
+  box-shadow: 10px 15px 10px rgba(0,0,0,0.5);
+  background: lightblue;
+}
+
+.article img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px black;
+}
+.article:hover img{
+  transform: scale(1.05);
+  box-shadow: 10px 15px 10px rgba(0,0,0,0.5);
+ }
+.article p {
+  font-size: 16px;
+  margin-top: 10px;
+  color: black;
+  font-family: Times New Roman;
+}
+
+/* ========== À PROPOS ========== */
+.Propos {
+  background: linear-gradient(to top,lightgreen,lightblue,lightgreen);
+  padding: 40px 20px;
+    color:black;
+
+}
+
+.Propos h3 {
+  font-size: 26px;
+     font-family: Georgia;
+
+}
+
+.Propos .texte {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 20px auto;
+  line-height: 1.6;
+     font-family: Times New Roman;
+
+}
+
+/* ========== CONTACTS ========== */
+.Contacts {
+  padding: 40px 20px;
+}
+
+.Contacts p {
+  font-size: 20px;
+  font-family: Times New Roman;
+  font-weight: bold;
+  color:black;
+}
+
+.Contacts a {
+  background-color: rgba(120,255,0,0.9);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-size: 18px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-weight:bold;
+  font-family: Georgia;
+}
+
+.Contacts a:hover {
+  background: white;
+  background:green;
+}
+
+/* ========== FOOTER ========== */
+footer {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  font-size: 14px;
+  color: lightgray;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* 📱 Téléphone : 2 produits par ligne */
+@media (max-width: 600px) {
+  .Produits {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  header h1 {
+    font-size: 24px;
+  }
+
+  .Accueil h2 {
+    font-size: 22px;
+  }
+
+  .article img {
+    height: 180px;
+  }
+}
+
+/* 💻 Tablette : 3 produits par ligne */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .Produits {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  header h1 {
+    font-size: 28px;
+  }
+
+  .article img {
+    height: 220px;
+  }
+}
+
+/* 🖥️ Ordinateur : 4 produits par ligne */
+@media (min-width: 1025px) {
+  .Produits {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
